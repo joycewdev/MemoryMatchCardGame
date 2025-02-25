@@ -2,6 +2,7 @@
  * These are the functions and features of the Memory Match Card Game
  */
 
+// Executes on load
 window.addEventListener("load", function (event) {
     let name = document.getElementById("name");
     let age = document.getElementById("age");
@@ -11,6 +12,7 @@ window.addEventListener("load", function (event) {
 
     document.getElementById("startScreen").classList.add("active");
 
+    // Verifies that user input is valid every time input fields are changed
     inputInfo.addEventListener("input", function (event) {
         if (colour.value === "" || name.value === "" || age.value === "" || name.value.length > 12 || String(age.value).includes(".") || age.value < 3 || age.value > 120) {
             startBtn.disabled = true;
@@ -23,10 +25,12 @@ window.addEventListener("load", function (event) {
         }
     });
 
+    // Gets the colour that the user selected from the dropdown menu when the field is changed
     colour.addEventListener("input", function (event) {
         colour.style.color = colour.value;
     });
 
+    // game function is called to begin the game once start button is clicked
     startBtn.addEventListener("click", function (event) {
         let selectedColour = colour.value;
         let inputtedName = name.value;
@@ -60,17 +64,20 @@ function game(inputtedName, selectedColour) {
     bestMoves.textContent = "Best:"
     reset();
 
+    // Help panel is displayed once help button is clicked
     helpBtn.addEventListener("click", function (event) {
         cards.forEach(card => card.style.display = "none");
         result.textContent = "Match all of the cards with their pairs in the least number of moves. If you miss a match, both cards are turned over again. As a bonus activity, try to identify the shapes. Improve your memory and pattern recognition skills!"
         resultContent.style.display = "flex";
     });
 
+    // Help panel is removed once x button is clicked
     x.addEventListener("click", function (event) {
         cards.forEach(card => card.style.display = "flex");
         resultContent.style.display = "none";
     });
 
+    // reset function is called to restart the game once reset button is clicked
     resetBtn.addEventListener("click", function (event) {
         reset();
     });
@@ -85,6 +92,7 @@ function game(inputtedName, selectedColour) {
         secondCard = disableCards = false;
         matches = moveCount = 0;
         moves.textContent = inputtedName + "'s Moves: 0";
+        // flipCard function is called once card is clicked
         cards.forEach(card => card.addEventListener('click', flipCard));
         cards.forEach(card => card.style.transition = "none");
         setTimeout(function () {
