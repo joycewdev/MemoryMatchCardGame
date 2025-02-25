@@ -1,0 +1,127 @@
+<!doctype html>
+
+<!--
+This is the overall structure of the Memory Match Card Game
+-->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Memory Match Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <div id="startScreen" class="screen">
+        <h3>Before you begin the game, please enter:</h3>
+        <div id="inputInfo">
+            <input id="name" type="text" placeholder="Name (≤ 12 characters)">
+            <input id="age" type="number" placeholder="Age (3-120 yrs)" min="3" max="120">
+            <select id="colour" name="colours">
+                <option value="" disabled selected>Colour</option>
+                <option value="#2a9d8f" style="color:#2a9d8f">Green ⬤</option>
+                <option value="#4059ad" style="color:#4059ad">Blue ⬤</option>
+                <option value="#5e548e" style="color:#5e548e">Purple ⬤</option>
+                <option value="#8f2d56" style="color: #8f2d56">Maroon ⬤</option>
+            </select>
+            <button id="startBtn" disabled>Start Game</button>
+        </div>
+    </div>
+    <div id="gameScreen" class="screen">
+        <h1>Memory Match Card Game</h1>
+        <div id="menu">
+            <div id="buttonsBar">
+                <div id="helpBtn" class="btn">
+                    <img id="icon" src="./imgs/help.png">
+                    <strong id="hide">Help</strong>
+                </div>
+                <button id="resetBtn" class="btn">
+                    <img id="icon" src="./imgs/reset.png">
+                    <strong id="hide">
+                        <h3>Reset</h3>
+                    </strong>
+                </button>
+            </div>
+            <h4 id="moves">Moves:</h4>
+            <h4 id="bestMoves">Best:</h4>
+        </div>
+        <div id="container">
+            <div id="resultContent">
+                <img id="x" src="./imgs/x.png">
+                <p id="result">
+                <p>
+            </div>
+            <div id="cards">
+                <div class="card">
+                    <img class="front cone" src="./imgs/cone.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front cone" src="./imgs/cone.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front cube" src="./imgs/cube.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front cube" src="./imgs/cube.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front cylinder" src="./imgs/cylinder.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front cylinder" src="./imgs/cylinder.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front hexprism" src="./imgs/hexprism.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front hexprism" src="./imgs/hexprism.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front pyramid" src="./imgs/pyramid.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front pyramid" src="./imgs/pyramid.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front rectprism" src="./imgs/rectprism.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front rectprism" src="./imgs/rectprism.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front rhombus" src="./imgs/rhombus.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front rhombus" src="./imgs/rhombus.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front sphere" src="./imgs/sphere.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+                <div class="card">
+                    <img class="front sphere" src="./imgs/sphere.png">
+                    <img class="back" src="./imgs/question.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
